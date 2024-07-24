@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Moon Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time to Seconds Converter</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <h1>
-    MoonProject
-  </h1>
-  <p>Moonprojet is a test project in github</p>
-  <p>The following link a simple link to <a target="_blank" href="https://www.google.com">google.com</a></p>
+    <div class="container">
+        <h1>Time to Seconds Converter</h1>
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" min="0">
+        
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" min="0">
+        
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" min="0">
+        
+        <button onclick="convertToSeconds()">Convert to Seconds</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function convertToSeconds() {
+            var hours = parseInt(document.getElementById('hours').value) || 0;
+            var minutes = parseInt(document.getElementById('minutes').value) || 0;
+            var seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+            var totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+
+            document.getElementById('result').textContent = 'Total: ' + totalSeconds + ' seconds';
+        }
+    </script>
 </body>
 </html>
