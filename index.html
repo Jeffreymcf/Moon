@@ -23,16 +23,7 @@
         <div class="result" id="result"></div>
     </div>
 
-    <script>
-        function convertToSeconds() {
-            var hours = parseInt(document.getElementById('hours').value) || 0;
-            var minutes = parseInt(document.getElementById('minutes').value) || 0;
-            var seconds = parseInt(document.getElementById('seconds').value) || 0;
+    <script src="script.js"></script>
 
-            var totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
-
-            document.getElementById('result').textContent = 'Total: ' + totalSeconds + ' seconds';
-        }
-    </script>
 </body>
 </html>
